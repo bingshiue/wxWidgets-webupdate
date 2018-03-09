@@ -1,0 +1,15 @@
+
+ 19:59:26: 
+ 19:59:26:  LOG OF WEBUPDATER 1.0 SESSION BEGAN AT 26/10/2005 19:59:26
+ 19:59:26: -----------------------------------------------------------
+ 19:59:26: 
+ 19:59:26: WebUpdaterApp::OnInit - initializing sockets & handlers
+ 19:59:26: WebUpdaterApp::OnInit - loading the local XML webupdate script simple.xml
+ 19:59:26: wxWebUpdateXMLScript::Load - loading /mnt/work/wxCode/components/webupdate/samples/simple/v2.0.3/simple.xml
+ 19:59:26: The installation of the WebUpdater component of this application
+           is corrupted; the file:
+           
+           	/mnt/work/wxCode/components/webupdate/samples/simple/v2.0.3/simple.xml
+           
+           is missing (or invalid); please reinstall the program.
+ 19:59:28: wxUninitializeWebUpdate - deleting the WebUpdate installer

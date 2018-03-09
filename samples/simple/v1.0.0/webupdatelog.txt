@@ -1,0 +1,42 @@
+
+ 16:13:24: 
+ 16:13:24:  LOG OF WEBUPDATER 1.0 SESSION BEGAN AT 12/11/2005 16:13:24
+ 16:13:24: -----------------------------------------------------------
+ 16:13:24: 
+ 16:13:24: WebUpdaterApp::OnPreInit - current platform is [gtk - any - Linux 2.6.11-1.1369_FC4 x86_64]
+ 16:13:24: WebUpdaterApp::OnInit - initializing sockets & handlers
+ 16:13:24: WebUpdaterApp::OnInit - loading the local XML webupdate script local.xml
+ 16:13:24: wxWebUpdateXMLScript::Load - loading /mnt/work/wxCode/components/webupdate/samples/simple/v1.0.0/local.xml
+ 16:13:24: wxWebUpdateXMLScript::GetWebUpdateVersion - the version of this XML WebUpdate document is 1.0
+ 16:13:24: wxWebUpdateXMLScript::GetWebUpdateVersion - the version of this XML WebUpdate document matches the installer engine version
+ 16:13:24: WebUpdaterApp::OnInit - loading the XRC file [webupdatedlg.xrc]
+ 16:13:24: WebUpdaterApp::OnInit - creating the WebUpdaterDlg
+ 16:13:24: wxWebUpdateDlg::InitWidgetsFromXRC - loading the [wxWebUpdateLogDlg] resource...
+ 16:13:24: wxWebUpdateDlg::InitThreads - successfully initialized the download & install threads...
+ 16:13:27: wxWebUpdateDlg::ConnectionRequired - creating the wxDialUpManager
+ 16:13:28: wxWebUpdateDlg::ConnectionRequired - found a valid connection
+ 16:13:28: wxDownloadThread::Entry - downloading http://wxcode.sourceforge.net/components/webupdate/script1.xml
+ 16:13:28: wxGetInputStreamFromURI - using wxHTTPBuilder
+ 16:13:32: wxDownloadThread::Entry - completed download of 2030 bytes
+ 16:13:32: wxWebUpdateDlg::OnDownloadComplete - Download status: successfully completed
+ 16:13:32: wxWebUpdateXMLScript::Load - loading /tmp/webupdateYzJ0fm
+ 16:13:32: wxWebUpdateXMLScript::GetWebUpdateVersion - the version of this XML WebUpdate document is 1.0
+ 16:13:32: wxWebUpdateXMLScript::GetWebUpdateVersion - the version of this XML WebUpdate document matches the installer engine version
+ 16:13:32: wxWebUpdateXMLScript::GetPackage - parsing package [simple]
+ 16:13:32: wxWebUpdateActionExtract::SetProperties - name: [file], value: [/tmp/simple-msw-2.0.3.zip]
+ 16:13:32: wxWebUpdateActionExtract::SetProperties - name: [where], value: [/mnt/work/wxCode/components/webupdate/samples/simple/v1.0.0]
+ 16:13:32: wxWebUpdateDlg::OnScriptDownload - XML script loaded successfully
+ 16:13:32: wxWebUpdateListCtrl::CacheDownloadSizes - launching the size cacher thread
+ 16:13:32: wxWebUpdateListCtrl::RebuildPackageList - Adding the 'simple' package...
+ 16:13:32: wxSizeCacherThread::Entry - caching file sizes
+ 16:13:32: wxGetInputStreamFromURI - using wxHTTPBuilder
+ 16:13:34: wxSizeCacherThread::Entry - caching of file sizes completed
+ 16:13:34: wxWebUpdateListCtrl::OnCacheSizeComplete - sizes cached
+ 16:14:08: wxWebUpdateDlg::AbortDialog - stopping the download thread
+ 16:14:09: wxWebUpdateDlg::AbortDialog - stopped & deleted the download thread
+ 16:14:09: wxWebUpdateDlg::AbortDialog - stopping the installer thread
+ 16:14:09: wxWebUpdateDlg::AbortDialog - stopped & deleted the installer thread
+ 16:14:09: WebUpdaterDlg::OnQuit - quitting
+ 16:14:09: wxUninitializeWebUpdate - deleting the WebUpdate installer
+ 16:14:09: WebUpdaterApp::OnExit - restarting the updated application [./simple]...
+ 16:14:09: WebUpdaterApp::OnExit - calling wxApp::OnExit

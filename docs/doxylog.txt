@@ -1,0 +1,55 @@
+/mnt/work/wxCode/components/webupdate/include/wx/stdactions.h:62: Warning: Found ';' while parsing initializer list! (doxygen could be confused by a macro call without semicolon)
+/mnt/work/wxCode/components/webupdate/include/wx/stdactions.h:80: Warning: Found ';' while parsing initializer list! (doxygen could be confused by a macro call without semicolon)
+/mnt/work/wxCode/components/webupdate/include/wx/stdactions.h:101: Warning: Found ';' while parsing initializer list! (doxygen could be confused by a macro call without semicolon)
+/mnt/work/wxCode/components/webupdate/include/wx/stdactions.h:125: Warning: Found ';' while parsing initializer list! (doxygen could be confused by a macro call without semicolon)
+/mnt/work/wxCode/components/webupdate/include/wx/stdactions.h:137: Warning: Found ';' while parsing initializer list! (doxygen could be confused by a macro call without semicolon)
+/mnt/work/wxCode/components/webupdate/include/wx/stdactions.h:159: Warning: Found ';' while parsing initializer list! (doxygen could be confused by a macro call without semicolon)
+/mnt/work/wxCode/components/webupdate/src/stdactions.cpp:61: Warning: no matching class member found for
+  bool wxWebUpdateActionRun::Run() const
+/mnt/work/wxCode/components/webupdate/src/stdactions.cpp:85: Warning: no matching class member found for
+  bool wxWebUpdateActionRun::SetProperties(const wxArrayString &propnames, const wxArrayString &propvalues)
+/mnt/work/wxCode/components/webupdate/src/stdactions.cpp:143: Warning: no matching class member found for
+  bool wxWebUpdateActionExtract::Run() const
+/mnt/work/wxCode/components/webupdate/src/stdactions.cpp:229: Warning: no matching class member found for
+  bool wxWebUpdateActionExtract::SetProperties(const wxArrayString &propnames, const wxArrayString &propvalues)
+/mnt/work/wxCode/components/webupdate/src/stdactions.cpp:292: Warning: no matching class member found for
+  bool wxWebUpdateActionCopy::Run() const
+/mnt/work/wxCode/components/webupdate/src/stdactions.cpp:333: Warning: no matching class member found for
+  bool wxWebUpdateActionCopy::SetProperties(const wxArrayString &propnames, const wxArrayString &propvalues)
+/mnt/work/wxCode/components/webupdate/src/stdactions.cpp:387: Warning: no matching class member found for
+  bool wxWebUpdateActionMkdir::Run() const
+/mnt/work/wxCode/components/webupdate/src/stdactions.cpp:418: Warning: no matching class member found for
+  bool wxWebUpdateActionMkdir::SetProperties(const wxArrayString &propnames, const wxArrayString &propvalues)
+/mnt/work/wxCode/components/webupdate/src/stdactions.cpp:456: Warning: no matching class member found for
+  bool wxWebUpdateActionMkfile::Run() const
+/mnt/work/wxCode/components/webupdate/src/stdactions.cpp:499: Warning: no matching class member found for
+  bool wxWebUpdateActionMkfile::SetProperties(const wxArrayString &propnames, const wxArrayString &propvalues)
+/mnt/work/wxCode/components/webupdate/src/stdactions.cpp:547: Warning: no matching class member found for
+  bool wxWebUpdateActionOpen::Run() const
+/mnt/work/wxCode/components/webupdate/src/stdactions.cpp:603: Warning: no matching class member found for
+  bool wxWebUpdateActionOpen::SetProperties(const wxArrayString &propnames, const wxArrayString &propvalues)
+/mnt/work/wxCode/components/webupdate/src/webupdate.cpp:916: Warning: no matching class member found for
+  wxWebUpdateCheckFlag wxWebUpdatePackage::Check(const wxString &localversion) const
+Possible candidates:
+  virtual wxWebUpdateCheckFlag wxWebUpdatePackage::Check(const wxVersion &localversion) const 
+  virtual wxWebUpdateCheckFlag wxWebUpdatePackage::Check(int maj, int min, int rel) const 
+/mnt/work/wxCode/components/webupdate/src/webupdate.cpp:969: Warning: no matching class member found for
+  bool wxWebUpdatePackage::ExtractVersionNumbers(const wxString &str, int *maj, int *min, int *rel)
+Possible candidates:
+  static bool wxWebUpdatePackage::ExtractVersionNumbers(const wxVersion &str, int *maj, int *min, int *rel)
+/mnt/work/wxCode/components/webupdate/include/wx/webupdate.h:646: Warning: argument `proxy' of command @param is not found in the argument list of wxWebUpdateDownload::DownloadAsynch(const wxString &path, wxEvtHandler *handler)
+/mnt/work/wxCode/components/webupdate/include/wx/webupdate.h:646: Warning: argument `user' of command @param is not found in the argument list of wxWebUpdateDownload::DownloadAsynch(const wxString &path, wxEvtHandler *handler)
+/mnt/work/wxCode/components/webupdate/include/wx/webupdate.h:646: Warning: argument `password' of command @param is not found in the argument list of wxWebUpdateDownload::DownloadAsynch(const wxString &path, wxEvtHandler *handler)
+/mnt/work/wxCode/components/webupdate/include/wx/webupdate.h:646: Warning: The following parameters of wxWebUpdateDownload::DownloadAsynch(const wxString &path, wxEvtHandler *handler) are not documented:
+  parameter path
+  parameter handler
+
+/mnt/work/wxCode/components/webupdate/include/wx/webupdate.h:781: Warning: argument `strURL' of command @param is not found in the argument list of wxWebUpdatePackage::Check(const wxVersion &localversion) const
+/mnt/work/wxCode/components/webupdate/include/wx/webupdate.h:781: Warning: argument `version' of command @param is not found in the argument list of wxWebUpdatePackage::Check(const wxVersion &localversion) const
+/mnt/work/wxCode/components/webupdate/include/wx/webupdate.h:781: Warning: argument `packagename' of command @param is not found in the argument list of wxWebUpdatePackage::Check(const wxVersion &localversion) const
+/mnt/work/wxCode/components/webupdate/include/wx/webupdate.h:781: Warning: The following parameters of wxWebUpdatePackage::Check(const wxVersion &localversion) const are not documented:
+  parameter localversion
+
+/mnt/work/wxCode/components/webupdate/include/wx/webupdate.h:861: Warning: Unsupported html tag <actions> found
+/mnt/work/wxCode/components/webupdate/include/wx/webupdate.h:861: Warning: Unsupported html tag <actions> found
+/mnt/work/wxCode/components/webupdate/docs/docs.txt:358: Warning: end of comment block while expecting command </code>

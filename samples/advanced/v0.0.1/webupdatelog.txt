@@ -1,0 +1,24 @@
+
+ 16:12:44: 
+ 16:12:44:  LOG OF WEBUPDATER 1.0 SESSION BEGAN AT 12/11/2005 16:12:44
+ 16:12:44: -----------------------------------------------------------
+ 16:12:44: 
+ 16:12:44: WebUpdaterApp::OnPreInit - current platform is [gtk - any - Linux 2.6.11-1.1369_FC4 x86_64]
+ 16:12:44: WebUpdaterApp::OnInit - initializing sockets & handlers
+ 16:12:44: WebUpdaterApp::OnInit - loading the local XML webupdate script local.xml
+ 16:12:44: wxWebUpdateXMLScript::Load - loading /mnt/work/wxCode/components/webupdate/samples/advanced/v0.0.1/local.xml
+ 16:12:45: wxWebUpdateXMLScript::GetWebUpdateVersion - the version of this XML WebUpdate document is 1.0
+ 16:12:45: wxWebUpdateXMLScript::GetWebUpdateVersion - the version of this XML WebUpdate document matches the installer engine version
+ 16:12:45: WebUpdaterApp::OnInit - loading the XRC file [webupdatedlg.xrc]
+ 16:12:45: WebUpdaterApp::OnInit - creating the WebUpdaterDlg
+ 16:12:45: wxWebUpdateDlg::InitWidgetsFromXRC - loading the [wxWebUpdateDlg] resource...
+ 16:12:45: wxWebUpdateDlg::InitThreads - successfully initialized the download & install threads...
+ 16:12:46: wxWebUpdateDlg::OnCancel - user hit the cancel button...
+ 16:12:46: wxWebUpdateDlg::AbortDialog - stopping the download thread
+ 16:12:46: wxWebUpdateDlg::AbortDialog - stopped & deleted the download thread
+ 16:12:46: wxWebUpdateDlg::AbortDialog - stopping the installer thread
+ 16:12:46: wxWebUpdateDlg::AbortDialog - stopped & deleted the installer thread
+ 16:12:46: WebUpdaterDlg::OnQuit - quitting
+ 16:12:46: wxUninitializeWebUpdate - deleting the WebUpdate installer
+ 16:12:46: WebUpdaterApp::OnExit - restarting the updated application [./advanced]...
+ 16:12:46: WebUpdaterApp::OnExit - calling wxApp::OnExit
