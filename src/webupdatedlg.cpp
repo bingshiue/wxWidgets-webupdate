@@ -24,7 +24,7 @@
     #include <wx/checkbox.h>
     #include <wx/msgdlg.h>
     #include <wx/dirdlg.h>
-    #include <wx/generic/dirdlgg.h>
+    //#include <wx/dirdlgg.h>
     #include <wx/stattext.h>
     #include <wx/gauge.h>
     #include <wx/textctrl.h>
@@ -1171,7 +1171,7 @@ bool wxWebUpdateAdvPanel::InitWidgetsFromXRC(wxWindow *parent)
     if (m_pDownloadPathTextCtrl) {
 
         // get the temporary folder where we put by default the updates
-        wxFileName str(wxFileName::CreateTempFileName(wxEmptyString, NULL));
+        wxFileName str(wxFileName::CreateTempFileName(wxString("")));//wxEmptyString, NULL));
         str.SetFullName(wxEmptyString);     // remove the filename and keep only the path
         m_pDownloadPathTextCtrl->SetValue(str.GetLongPath());
     }

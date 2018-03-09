@@ -17,6 +17,7 @@
 #include "wx/webupdatedef.h"		// for the WXDLLIMPEXP_WEBUPDATE macro
 #include <wx/listctrl.h>
 #include <wx/imaglist.h>
+#include <wx/settings.h>
 
 #if wxUSE_CHECKEDLISTCTRL
 

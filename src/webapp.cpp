@@ -90,44 +90,45 @@
 // usage instructions for this app
 // ----------------------------------------------------------------------------
 
-#define OPTION_XMLSCRIPT        wxT("l")
-#define OPTION_XRC              wxT("x")
-#define OPTION_RESOURCE         wxT("e")
-#define OPTION_URI              wxT("u")
-#define OPTION_ASKURI           wxT("a")
+#define OPTION_XMLSCRIPT        "l"//wxT("l")
+#define OPTION_XRC              "x"//wxT("x")
+#define OPTION_RESOURCE         "e"//wxT("e")
+#define OPTION_URI              "u"//wxT("u")
+#define OPTION_ASKURI           "a"//wxT("a")
 
-#define SWITCH_RESTART          wxT("r")
-#define SWITCH_SAVELOG          wxT("s")
+#define SWITCH_RESTART          "r"//wxT("r")
+#define SWITCH_SAVELOG          "s"//wxT("s")
 
 static const wxCmdLineEntryDesc g_cmdLineDesc[] =
 {
     // options
-    { wxCMD_LINE_OPTION, OPTION_XMLSCRIPT, wxT("xml"),
-        wxT("Use the given local XML file"),
+    { wxCMD_LINE_OPTION, OPTION_XMLSCRIPT, "xml",
+        "Use the given local XML file",
         wxCMD_LINE_VAL_STRING, wxCMD_LINE_PARAM_OPTIONAL },
-    { wxCMD_LINE_OPTION, OPTION_XRC, wxT("xrc"),
-        wxT("Use the given local XRC file"),
+    { wxCMD_LINE_OPTION, OPTION_XRC, "xrc",
+        "Use the given local XRC file",
         wxCMD_LINE_VAL_STRING, wxCMD_LINE_PARAM_OPTIONAL },
-    { wxCMD_LINE_OPTION, OPTION_RESOURCE, wxT("res"),
-        wxT("Use the given resource name when loading the XRC"),
+    { wxCMD_LINE_OPTION, OPTION_RESOURCE, "res",
+        "Use the given resource name when loading the XRC",
         wxCMD_LINE_VAL_STRING, wxCMD_LINE_PARAM_OPTIONAL },
-    { wxCMD_LINE_OPTION, OPTION_URI, wxT("uri"),
-        wxT("Use the given URI to load the remote XML file"),
+    { wxCMD_LINE_OPTION, OPTION_URI, "uri",
+        "Use the given URI to load the remote XML file",
         wxCMD_LINE_VAL_STRING, wxCMD_LINE_PARAM_OPTIONAL },
-    { wxCMD_LINE_OPTION, OPTION_ASKURI, wxT("ask-uri"),
-        wxT("Asks the uer the URI of the remote XML file"),
+    { wxCMD_LINE_OPTION, OPTION_ASKURI, "ask-uri",
+        "Asks the uer the URI of the remote XML file",
         wxCMD_LINE_VAL_STRING, wxCMD_LINE_PARAM_OPTIONAL },
 
     // switches
-    { wxCMD_LINE_SWITCH, SWITCH_RESTART, wxT("restart"),
-        wxT("Restart the updated application when WebUpdater is closed"),
+    { wxCMD_LINE_SWITCH, SWITCH_RESTART, "restart",
+        "Restart the updated application when WebUpdater is closed",
         wxCMD_LINE_VAL_NONE, wxCMD_LINE_PARAM_OPTIONAL },
-    { wxCMD_LINE_SWITCH, SWITCH_SAVELOG, wxT("savelog"),
-        wxT("Saves the log messages to '") wxWU_LOGFILENAME wxT("'"),
+    { wxCMD_LINE_SWITCH, SWITCH_SAVELOG, "savelog",
+        //("Saves the log messages to '") wxWU_LOGFILENAME wxT("'"),
+        "Saves the log messages to webupdatelog.txt",
         wxCMD_LINE_VAL_NONE, wxCMD_LINE_PARAM_OPTIONAL },
 
     // help
-    { wxCMD_LINE_SWITCH, wxT("h"), wxT("help"), wxT("Show this help message"),
+    { wxCMD_LINE_SWITCH, "h", "help", "Show this help message",
         wxCMD_LINE_VAL_NONE, wxCMD_LINE_OPTION_HELP },
 
     { wxCMD_LINE_NONE }
@@ -388,7 +389,7 @@ bool WebUpdaterApp::OnPreInit()
     if (hasAskUri) {
         wxString xmlname = askurifn.GetFullName();
         if (xmlname.IsEmpty()) {
-            if (m_script.GetRemoteScriptURI()) {
+            if (m_script.GetRemoteScriptURI() != wxEmptyString ) {
                 xmlname = m_script.GetRemoteScriptURI().AfterLast(wxFileName::GetPathSeparator());
             } else {
                 wxLogError(wxT("WebUpdaterApp::OnInit - the --ask-uri option is incomplete"));

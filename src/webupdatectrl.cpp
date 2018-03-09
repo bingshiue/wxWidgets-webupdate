@@ -25,7 +25,7 @@
     #include <wx/checkbox.h>
     #include <wx/msgdlg.h>
     #include <wx/dirdlg.h>
-    #include <wx/generic/dirdlgg.h>
+    //#include <wx/generic/dirdlgg.h>
     #include <wx/stattext.h>
     #include <wx/gauge.h>
     #include <wx/textctrl.h>

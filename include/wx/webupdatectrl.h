@@ -109,11 +109,11 @@ protected:		// event handlers
 public:
 	
 	//! Constructs this wxWebUpdateListCtrl.
-	wxWebUpdateListCtrl::wxWebUpdateListCtrl()
+	wxWebUpdateListCtrl()
 		: wxWUDLC_BASECLASS(), m_bLocked(FALSE) {}
 
 	//! Constructs this wxWebUpdateListCtrl.
-	wxWebUpdateListCtrl::wxWebUpdateListCtrl(wxWindow* parent, wxWindowID id, 
+	wxWebUpdateListCtrl(wxWindow* parent, wxWindowID id, 
 		const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, 
 		long style = wxLC_ICON, const wxValidator& validator = wxDefaultValidator, 
 		const wxString& name = wxListCtrlNameStr) 

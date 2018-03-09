@@ -13,11 +13,13 @@
 #define _WX_WEBUPDATE_H_
 
 // wxWidgets headers
+#include <wx/wx.h>
 #include "wx/webupdatedef.h"
 #include "wx/xml/xml.h"
 #include "wx/url.h"
-#include "wx/log.h"
+#include <wx/log.h>
 #include "wx/textfile.h"
+#include <wx/utils.h> 
 
 
 // defined later
@@ -109,14 +111,26 @@ DECLARE_EXPORTED_EVENT_TYPE(WXDLLIMPEXP_WEBUPDATE, wxEVT_COMMAND_EXECUTE, -1);
 
 enum
 {
-    wxLOG_UsrMsg = wxLOG_User,  // messages shown to the user + saved in the log file
-    wxLOG_AdvMsg,               // messages saved in the log file only
-    wxLOG_NewSection            // a new phase in program flow
+    wxLOG_UsrMsg = wxLOG_Info,  // messages shown to the user + saved in the log file
+    wxLOG_AdvMsg = wxLOG_Debug,               // messages saved in the log file only
+    wxLOG_NewSection = wxLOG_Trace            // a new phase in program flow
 };
 
+#if 0 // Don't Use User Defined Log Function
+
+#define DECLARE_LOG_FUNCTION(level) \
+extern void WXDLLIMPEXP_BASE wxLog##level(const char *szFormat, ...)
+ 
 DECLARE_LOG_FUNCTION(AdvMsg);
 DECLARE_LOG_FUNCTION(UsrMsg);
 DECLARE_LOG_FUNCTION(NewSection);
+
+#endif
+
+#define wxLogAdvMsg wxLogWarning
+#define wxLogUsrMsg wxLogWarning
+#define wxLogNewSection wxLogWarning
+
 
 //! A wxLogPassThrough-derived log target for the WebUpdate classes.
 //! This target processes in smart way the log strings sent by

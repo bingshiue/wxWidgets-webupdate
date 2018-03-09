@@ -26,6 +26,7 @@
     #include <wx/textctrl.h>
 #endif
 
+#include <wx/wx.h>
 #include <wx/url.h>
 #include <wx/file.h>
 #include <wx/app.h>
@@ -36,10 +37,12 @@
 #include "wx/installer.h"
 #include <wx/tokenzr.h>
 #include <wx/regex.h>
+#include <wx/utils.h> 
 
 #if wxUSE_HTTPENGINE
 #include <wx/httpbuilder.h>
 #endif
+
 
 // wxWidgets RTTI
 IMPLEMENT_CLASS(wxWebUpdateLog, wxObject)
@@ -184,15 +187,16 @@ void wxWebUpdateLog::StopFileLog()
     m_txtFile.Close();
 }
 
+#if 0
 // generic log function
-extern void wxVLogGeneric(wxLogLevel level, const wxChar *szFormat, va_list argptr);
+extern void wxVLogGeneric(wxLogLevel level, const char *szFormat, va_list argptr);
 
 #define IMPLEMENT_LOG_FUNCTION(level)                   \
-void wxLog##level(const wxChar *szFormat, ...)            \
+void wxLog##level(const char *szFormat, ...)            \
 {                                 \
     va_list argptr;                         \
     va_start(argptr, szFormat);                     \
-    wxVLogGeneric(wxLOG_##level, szFormat, argptr);         \
+    wxVLogGeneric(level, szFormat, argptr);         \
     va_end(argptr);                         \
 }
 
@@ -200,7 +204,7 @@ IMPLEMENT_LOG_FUNCTION(UsrMsg)
 IMPLEMENT_LOG_FUNCTION(AdvMsg)
 IMPLEMENT_LOG_FUNCTION(NewSection)
 //IMPLEMENT_LOG_FUNCTION(Info)
-
+#endif
 
 
 
@@ -620,42 +624,42 @@ wxWebUpdatePlatform wxWebUpdatePlatform::GetThisPlatform()
     // get port name
     switch ( wxGetOsVersion() )
     {
-    case wxMOTIF_X:
-        plat.SetPort(wxWUP_MOTIF);
-        break;
+    //case wxOS_MOTIF_X:
+        //plat.SetPort(wxWUP_MOTIF);
+        //break;
 
-    case wxMAC:
-    case wxMAC_DARWIN:
+    case wxOS_MAC:
+    //case wxOS_MAC_DARWIN:
         plat.SetPort(wxWUP_MAC);
         break;
 
-    case wxGTK:
-    case wxGTK_WIN32:
-    case wxGTK_OS2:
-    case wxGTK_BEOS:
-        plat.SetPort(wxWUP_GTK);
-        break;
+    //case wxOS_GTK:
+    //case wxOS_GTK_WIN32:
+    //case wxOS_GTK_OS2:
+    //case wxOS_GTK_BEOS:
+        //plat.SetPort(wxWUP_GTK);
+        //break;
 
-    case wxWINDOWS:
-    case wxPENWINDOWS:
-    case wxWINDOWS_NT:
-    case wxWIN32S:
-    case wxWIN95:
-    case wxWIN386:
+    case wxOS_WINDOWS:
+    //case wxOS_PENWINDOWS:
+    case wxOS_WINDOWS_NT:
+    //case wxOS_WIN32S:
+    //case wxOS_WIN95:
+    //case wxOS_WIN386:
         plat.SetPort(wxWUP_MSW);
         break;
 
-    case wxMGL_UNIX:
-    case wxMGL_X:
-    case wxMGL_WIN32:
-    case wxMGL_OS2:
+    //case wxOS_MGL_UNIX:
+    //case wxOS_MGL_X:
+    //case wxOS_MGL_WIN32:
+    //case wxOS_MGL_OS2:
         plat.SetPort(wxWUP_MGL);
         break;
 
-    case wxWINDOWS_OS2:
-    case wxOS2_PM:
-        plat.SetPort(wxWUP_OS2);
-        break;
+    //case wxOS_WINDOWS_OS2:
+    //case wxOS_OS2_PM:
+        //plat.SetPort(wxWUP_OS2);
+        //break;
 
     default:
         plat.SetPort(wxWUP_INVALID);
@@ -834,7 +838,7 @@ bool wxWebUpdateDownload::DownloadSynch(const wxString &path
         (GetDownloadSize() > 0 && out.GetSize() != GetDownloadSize()))
         return FALSE;
 
-    wxLogUsrMsg(wxT("wxWebUpdateDownload::DownloadSynch - completed download of %lu bytes"),
+    wxLogAdvMsg(wxT("wxWebUpdateDownload::DownloadSynch - completed download of %lu bytes"),
         out.GetSize());
 
     // we have successfully download the file

@@ -170,11 +170,11 @@ protected:		// event handlers
 public:
 
 	//! Constructs a wxWebUpdateAdvPanel; for two-step creation.
-	wxWebUpdateAdvPanel::wxWebUpdateAdvPanel()
+	wxWebUpdateAdvPanel()
 			: m_xmlLocal(NULL) {}
 
 	//! Constructs a wxWebUpdateAdvPanel.
-	wxWebUpdateAdvPanel::wxWebUpdateAdvPanel(wxWindow* parent)
+	wxWebUpdateAdvPanel(wxWindow* parent)
 			: m_xmlLocal(NULL)
   		{ Create(parent); }
 
@@ -244,7 +244,7 @@ protected:
 	bool InitWidgetsFromXRC(wxWindow *parent);
 
 public:
-	wxWebUpdateAboutDlg::wxWebUpdateAboutDlg(wxWindow *parent)
+	wxWebUpdateAboutDlg(wxWindow *parent)
 		{ InitWidgetsFromXRC(parent); }
 	virtual ~wxWebUpdateAboutDlg() {}
 
@@ -392,7 +392,7 @@ protected:		// event handlers
 public:
 
 	//! For two-step creations.
-	wxWebUpdateDlg::wxWebUpdateDlg() { PreInit(); }
+	wxWebUpdateDlg() { PreInit(); }
 
 	//! Constructs a wxWebUpdateDlg.
 	//! This function does not take so many parameters like a typical
@@ -401,7 +401,7 @@ public:
 	//! NOTE: the line
 	//!         wxDialog(parent, id, title, pos, size, style, name)
 	//! is not required since we are using XRC system
-	wxWebUpdateDlg::wxWebUpdateDlg(
+	wxWebUpdateDlg(
  						wxWindow *parent, 
 						const wxWebUpdateLocalXMLScript &script);
 
